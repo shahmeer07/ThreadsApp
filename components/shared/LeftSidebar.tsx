@@ -28,7 +28,11 @@ function LeftSidebar() {
       </div>
       <div className="mt-10 px-6">
         <SignedIn>
-          <SignOutButton>
+          <SignOutButton
+            signOutCallback={() =>
+              router.push("/app/(auth)/sign-in/[[...sign-in]]")
+            }
+          >
             <div className=" flex cursor-pointer gap-4 p-4 ">
               <img
                 src="https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/logout-512.png"
